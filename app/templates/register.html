@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block container %}
+<div id="container_left"style="font-size: 20px;">
+	<div id=intro_head>Connect with your friends<br>Right here on GeoSpace</h2></div>
+	<ul id=intro_list>
+		<li id=intro_item>Explore and plot any location in Flanders</li>
+		<li id=intro_item>View plots and updates from your friends</li>
+		<li id=intro_item>Save and share your favourite locations</li>
+	<ul>
+</div>
+<div id="container_right">
+	<form action="" method="post">
+		{{ register_form.hidden_tag() }}
+		<table id="register_table">
+			<tr>
+				<td colspan="2">
+					<div id="register_head1">Get started, register here</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div id="register_head2">It'll only take a minute.</div>
+				</td>
+			</tr>
+			<tr>
+				<td>{{ register_form.first_name.label }}</td>
+				<td>{{ register_form.last_name.label }}</td>
+			</tr>
+			<tr>
+				<td>{{ register_form.first_name(size=18) }}</td>
+				<td>{{ register_form.last_name(size=18) }}</td>
+			</tr>
+			<tr>
+				<td>{{ register_form.email.label }}</td>
+			</tr>
+			<tr>
+				<td colspan="2">{{ register_form.email(size=44) }}</td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr><br><br></td>
+			</tr>
+			<tr>
+				<td>{{ register_form.username.label }}</td>
+			</tr>
+			<tr>
+				<td>{{ register_form.username(size=18) }}</td>
+			</tr>
+			<tr>
+				<td>{{ register_form.password.label }}</td>
+				<td>{{ register_form.password2.label }}</td>
+			</tr>
+			<tr>
+				<td>{{ register_form.password(size=18) }}</td>
+				<td>{{ register_form.password2(size=18) }}</td>
+			</tr>
+			<tr>
+				<td>{{ register_form.register() }}</td>
+			</tr>
+		</table>
+	</form>
+</div>
+{% endblock %}

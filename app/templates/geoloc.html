@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block container %}
+<div id="container_left">
+	<form action="" method="post">
+	  	{{ geo_form.hidden_tag() }}
+	  	<h1>{{ geo_form.header }}</h1>
+		<h3>{{ geo_form.address.label }}<br></h3>
+	   	<table>
+			<tr>
+				<td>{{ geo_form.address(size=36) }}{{ geo_form.plot() }}</td>
+			</tr>
+			<tr>
+				<td>
+				{{ geo_form.projection() }}
+				{{ geo_form.surroundings.label}}
+				{{ geo_form.surroundings(checked=True)}}
+				</td>
+			</tr>
+			<tr>
+				<td>
+					{{ geo_form.window() }}{{ geo_form.window.label }}
+				</td>
+			</tr>
+		</table>
+		<div id="info">
+			<p><b><i>Currently in alpha build!</i></b></p>
+			<p>Due to hosting issues our application is limited<br><br><br><br><br>
+			<i>Almost all</i> places in Antwerpen are available at the moment</p>
+
+		</div>
+	</form>
+</div>
+<div id="container_right">
+	<img class="image_container"alt="Chart" height="520" width="640"
+		src="{{ url_for('static', filename='plot.png') }}?v={{version}}">
+</div>
+{% endblock %}

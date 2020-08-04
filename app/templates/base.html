@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>GeoSpace - Log In or Sign Up</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v=5"/>
+	</head>
+	<body>
+		<div id="bar_outer">
+			<div id="bar_inner">
+				<a class="float_left" href="" id="logo_button"><h1>GeoSpace</h1></a>
+				{% if current_user.is_anonymous %}
+				<form class="float_right" id="login_form" action="" method="POST">
+					{{ login_form.hidden_tag() }}
+					<table id="login_table">
+						<tr>
+							<td>{{ login_form.username.label }}</td>
+							<td class="float_left">{{ login_form.password.label }}</td>
+						</tr>
+						<tr>
+							<td>{{ login_form.username(size=12) }}</td>
+							<td>{{ login_form.password(size=12) }}</td>
+							<td>{{ login_form.login() }}</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><a href="" id="small_link">Forgotten Account?</a></td>
+						</tr>
+					</table>
+				{% else %}
+				<div class="float_right">
+					<table id="account_table">
+						<tr><td id="account_link"><a href="">{{ current_user.username }}</a></td></tr>
+						<tr><td id="logout"><a href="{{ url_for('logout') }}" id="small_link">Logout</a></td></tr>
+					</table>
+				</div>
+				{% endif %}
+
+				</form>
+			</div>
+		</div>
+		<div id="container">
+		{% block container %}{% endblock %}
+		</div>
+	</body>
+</html>
