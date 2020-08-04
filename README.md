@@ -18,8 +18,8 @@ Author: Maarten Fish
 (this will download and subdivide k15 to match the lookup)
 - $ export FLASK_ENV=development
 - $ export FLASK_APP=geospace.py
+- $ flask run  
 
-### "flask run" to get started
 
 ### Not enough data?
 You can change the divide_and_conquer(15) param  
