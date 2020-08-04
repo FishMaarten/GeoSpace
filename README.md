@@ -20,3 +20,7 @@ Author: Maarten Fish
 - $ export FLASK_APP=geospace.py
 
 ### "flask run" to get started
+
+### Not enough data?
+You can change the divide_and_conquer(15) param  
+at the bottom of SubScrape.py to download additional geotiff maps
