@@ -17,7 +17,7 @@ geopandas==0.8.1
 gunicorn==20.0.4
 idna==2.10
 itsdangerous==1.1.0
-Jinja2==2.11.2
+Jinja2==2.11.3
 kaleido==0.0.1rc7
 kiwisolver==1.2.0
 lxml==4.5.2
