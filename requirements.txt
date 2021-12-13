@@ -20,7 +20,7 @@ itsdangerous==1.1.0
 Jinja2==2.11.2
 kaleido==0.0.1rc7
 kiwisolver==1.2.0
-lxml==4.5.2
+lxml==4.6.5
 MarkupSafe==1.1.1
 matplotlib==3.3.0
 munch==2.5.0
